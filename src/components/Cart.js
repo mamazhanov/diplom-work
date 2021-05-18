@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import formatCurrency from '../util';
 import Fade from 'react-reveal/Fade';
+import empty from './../assets/img/empty-2.gif';
 
 export default class Cart extends Component {
     constructor(props) {
@@ -31,13 +32,13 @@ export default class Cart extends Component {
     render() {
         const { cartItems } = this.props;
         return (
-            <div>
+            <div className="cart-main">
                 {cartItems.length === 0 ? (
-                    <div className="cart cart-header ">Cart is empty</div>
+                    <div className="cart cart-header ">Корзина:</div>
                 ) :
                     (
                         <div className="cart cart-header">
-                            You have {cartItems.length} in the cart{" "}
+                            Товаров в корзине: {cartItems.length}
                         </div>
                     )
                 }
@@ -55,9 +56,9 @@ export default class Cart extends Component {
                                             <div>{item.title}</div>
                                             <div className="right">
                                                 {formatCurrency(item.price)} x {item.count} {" "}
-                                                <button className="button" onClick={() => this.props.removeFromCart(item)}>
-                                                    Remove
-                                            </button>
+                                                <button className="button" style={{ borderRadius: "5px", padding: "8px" }} onClick={() => this.props.removeFromCart(item)}>
+                                                    Удалить
+                                                </button>
                                             </div>
                                         </div>
                                     </li>
@@ -66,17 +67,17 @@ export default class Cart extends Component {
                         </Fade>
                     </div>
                     {
-                        cartItems.length !== 0 && (
+                        cartItems.length ? (
                             <div>
                                 <div className="cart">
                                     <div className="total">
-                                        <div>Total: {" "}
+                                        <div>Сумма заказа: {" "}
                                             {formatCurrency(
                                                 cartItems.reduce((a, c) => a + c.price * c.count, 0)
                                             )}
                                         </div>
-                                        <button onClick={() => { this.setState({ showChekout: true }) }} className="button primary">
-                                            Proceed
+                                        <button onClick={() => { this.setState({ showChekout: true }) }} style={{ borderRadius: "5px", padding: "8px" }} className="button primary">
+                                            Продолжить
                                     </button>
                                     </div>
                                 </div>
@@ -95,7 +96,7 @@ export default class Cart extends Component {
                                                             onChange={this.handleInput} />
                                                     </li>
                                                     <li>
-                                                        <label>Name</label>
+                                                        <label>Имя</label>
                                                         <input
                                                             name="name"
                                                             type="text"
@@ -103,7 +104,7 @@ export default class Cart extends Component {
                                                             onChange={this.handleInput} />
                                                     </li>
                                                     <li>
-                                                        <label>Address</label>
+                                                        <label>Адрес</label>
                                                         <input
                                                             name="address"
                                                             type="text"
@@ -112,7 +113,7 @@ export default class Cart extends Component {
                                                     </li>
                                                     <li>
                                                         <button className="button primary" type="submit">
-                                                            Chekout
+                                                            Отправить
                                                     </button>
                                                     </li>
                                                 </ul>
@@ -121,7 +122,13 @@ export default class Cart extends Component {
                                     </Fade>
                                 )}
                             </div>
-                        )
+                        ) :
+                            (
+                                <center>
+                                    <img src={empty} style={{ width: "250px" }} />
+                                    <p style={{ marginTop: "-20px" }}>Корзинка пока пуст!</p>
+                                </center>
+                            )
                     }
                 </div>
             </div>
