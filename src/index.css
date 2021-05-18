@@ -81,7 +81,7 @@ footer {
 
 .products li {
   flex: 0.1 1 29rem;
-  height: 47rem;
+  height: 37rem;
   padding: 1rem;
 }
 .product {
@@ -90,16 +90,21 @@ footer {
   justify-content: space-between;
   height: 100%;
   box-shadow: 0 0 4px -1px gray;
+  border-radius: 8px;
+}
+.product a p {
+  margin: 1rem;
 }
 .product img {
-  max-width: 33rem;
-  max-height: 33rem;
+  width: 25rem;
+  height: 25rem;
 }
 .product-price {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .product-price div,
 .product-price button {
   text-align: center;
@@ -107,6 +112,9 @@ footer {
 }
 .product-price div {
   font-size: 2rem;
+}
+.product-price button {
+  border-radius: 0 0 8px 0;
 }
 .button {
   padding: 1rem;
@@ -120,28 +128,75 @@ footer {
 .button.primary {
   background-color: #f0c040;
 }
-
+.border-bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 10px 0;
+  border-bottom: 1px gray solid;
+}
+.border-bottom span {
+  color: #808080;
+}
 /* filter */
 
-.filter {
+.filter-none {
+  position: sticky;
+  top: 0;
+  background: #fff;
   display: flex;
   justify-content: space-between;
   padding: 1rem;
   margin: 1rem;
   border-bottom: 0.1rem #c0c0c0 solid;
+  font-size: 20px;
+  box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
+}
+
+.filter-show {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem;
+  border-bottom: 0.1rem #c0c0c0 solid;
+  font-size: 20px;
+  box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
 }
 .filter div {
   flex: 1;
 }
 
+.filter-sort select {
+  padding: 5px;
+  border-radius: 3px;
+  outline: none;
+}
+
+.filter-size select {
+  padding: 5px;
+  border-radius: 3px;
+  outline: none;
+}
+
 /*Index.css*/
+.cart-main {
+  position: sticky;
+  top: 0;
+}
 .cart {
   padding: 1rem;
   margin: 1rem;
   display: flex;
 }
 .cart-header {
+  box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
   border-bottom: 0.1rem #c0c0c0 solid;
+  font-size: 20px;
+  padding: 14px;
 }
 .cart-items {
   padding: 0;

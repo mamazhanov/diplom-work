@@ -13,12 +13,25 @@ class App extends React.Component {
       products: data.products,
       cartItems: localStorage.getItem("cartItems") ? JSON.parse(localStorage.getItem("cartItems")) : [],
       size: "",
-      sort: ""
+      sort: "",
+      filter: true
     }
   }
 
+  filterPositionShow = () => {
+    this.setState({
+      filter: true
+    })
+  };
+  filterPositionNone = () => {
+    this.setState({
+      filter: false
+    })
+  };
+
+
   createOrder = (order) => {
-    alert("Need t save order for " + order.name);
+    alert("Заказ принят!");
   }
 
   removeFromCart = (product) => {
@@ -86,18 +99,24 @@ class App extends React.Component {
       <div className="App">
         <div className="grid-container">
           <header>
-            <a href="/">React shoping cart</a>
+            <a href="/">Мир гаджетов</a>
           </header>
           <main>
             <div className="content">
               <div className="main">
-                <Filter count={this.state.products.length}
+                <Filter
+                  filterShow={this.state.filter}
+                  count={this.state.products.length}
                   size={this.state.size}
                   sort={this.state.sort}
                   filterProducts={this.filterProducts}
                   sortProducts={this.sortProducts}
                 />
-                <Products products={this.state.products} addToCart={this.addToCart} />
+                <Products
+                  filterPositionNone={this.filterPositionNone}
+                  filterPositionShow={this.filterPositionShow}
+                  products={this.state.products}
+                  addToCart={this.addToCart} />
               </div>
               <div className="sidebar">
                 <Cart cartItems={this.state.cartItems}
@@ -107,7 +126,7 @@ class App extends React.Component {
             </div>
           </main>
           <footer>
-            All right is reserved.
+            Сулайманова Г.Ж
           </footer>
         </div>
       </div>

@@ -14,23 +14,25 @@ export default class Products extends Component {
 
     openModal = (product) => {
         this.setState({ product });
+        this.props.filterPositionNone();
     }
 
     closeModal = () => {
         this.setState({ product: null });
+        this.props.filterPositionShow();
     }
 
     render() {
         const { product } = this.state;
         return (
-            <div>
+            <div >
                 <Fade bottom cascade>
                     <ul className="products">
                         {this.props.products.map(product => (
                             <li key={product._id}>
                                 <div className="product">
                                     <a href={"#" + product._id} onClick={() => this.openModal(product)}>
-                                        <img src={product.image} alt={product.title} />
+                                        <center><img src={product.image} alt={product.title} /></center>
                                         <p>
                                             {product.title}
                                         </p>
@@ -40,7 +42,7 @@ export default class Products extends Component {
                                             {formatCurrency(product.price)}
                                         </div>
                                         <button onClick={() => this.props.addToCart(product)}
-                                            className="button primary">Add To Cart</button>
+                                            className="button primary">В корзину</button>
                                     </div>
                                 </div>
                             </li>
@@ -49,39 +51,46 @@ export default class Products extends Component {
                 </Fade>
                 {
                     product && (
-                        <Modal isOpen={true} onRequestClose={this.closeModal}>
-                            <Zoom>
-                                <button className="close-modal" onClick={this.closeModal}>x</button>
-                                <div className="product-details">
-                                    <img src={product.image} alt={product.title} />
-                                    <div className="product-details-description">
-                                        <p>
-                                            <strong>{product.title}</strong>
-                                        </p>
-                                        <p>
-                                            {product.description}
-                                        </p>
-                                        <p>
-                                            available Sizes: {" "}
-                                            {product.availableSizes.map(x => (
-                                                <span>{" "} <button className="button">{x}</button></span>
-                                            ))}
-                                        </p>
-                                        <div className="product-price">
-                                            <div>
-                                                {formatCurrency(product.price)}
-                                            </div>
-                                            <button className="button primary" onClick={() => {
-                                                this.props.addToCart(product);
-                                                this.closeModal();
-                                            }}>
-                                                Add to Cart
+                        <div>
+                            <Modal isOpen={true} onRequestClose={this.closeModal} >
+                                <Zoom>
+                                    <button className="close-modal" onClick={this.closeModal}>x</button>
+                                    <div className="product-details">
+                                        <img src={product.image} alt={product.title} />
+                                        <div className="product-details-description">
+                                            <h1>
+                                                <strong>{product.title}</strong>
+                                            </h1>
+                                            <p>
+                                                <h3>Общие характеристики</h3>
+                                                <div className="border-bottom"> <span>Диагональ:</span>  {product.description.diagonal}</div>
+                                                <div className="border-bottom"> <span>Видеоадаптер:</span> {product.description.gpu}</div>
+                                                <div className="border-bottom"> <span>Операционная система:</span> {product.description.os}</div>
+                                                <div className="border-bottom"> <span>Модель процессора:</span> {product.description.cpu}</div>
+                                                <div className="border-bottom"> <span>Частота процессора:</span> {product.description.CPU_frequency} </div>
+                                                <div className="border-bottom"> <span>Объем оперативной памяти:</span> {product.description.ram}</div>
+                                                <div className="border-bottom"> <span>Тип жесткого диска:</span> {product.description.memoryType}</div>
+                                                <div className="border-bottom"> <span>Объем накопителя:</span> {product.description.memory}</div>
+                                            </p>
+                                            <p>
+
+                                            </p>
+                                            <div className="product-price">
+                                                <div>
+                                                    <h1> {formatCurrency(product.price)}</h1>
+                                                </div>
+                                                <button className="button primary" onClick={() => {
+                                                    this.props.addToCart(product);
+                                                    this.closeModal();
+                                                }}>
+                                                    В корзину
                                             </button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </Zoom>
-                        </Modal>
+                                </Zoom>
+                            </Modal>
+                        </div>
                     )
                 }
             </div >

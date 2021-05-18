@@ -2,51 +2,156 @@
   "products": [
     {
       "_id": "laptop1",
-      "image": "/images/laptop1.jpg",
-      "title": "Midi sundress with shirring detail",
-      "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
-      "availableSizes": ["Laptop"],
-      "price": 29.9
+      "image": "/images/acerSwift.jpg",
+      "title": "УЛЬТРАБУК ACER SWIFT 1 SF114-32-C6XS",
+      "description": {
+        "diagonal": "13,3″ - 33,78 см",
+          "gpu": "Intel HD Графика",
+          "os": "Windows 10",
+          "cpu": "Intel® Celeron® 1000M",
+          "CPU_frequency": "1.10 ГГц",
+          "ram": "4 GB",
+          "memoryType": "SSD",
+          "memory": "128 GB"
+      },
+      "availableSizes": ["Acer"],
+      "price": 37990 
     },
     {
       "_id": "laptop2",
-      "image": "/images/laptop2.jpg",
-      "title": "Midi sundress with ruched front",
-      "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
-      "availableSizes": ["Laptop"],
-      "price": 18.9
+      "image": "/images/aserNitro.png",
+      "title": "НОУТБУК ACER NITRO 5 AN515-44 R585SGN",
+      "description": {
+        "diagonal": "15,6″ - 39,62 см",
+          "gpu": "nVidia GeForce GTX",
+          "os": "DOS",
+          "cpu": "AMD® Ryzen ™ 5 4600H",
+          "CPU_frequency": "3.0 ГГц",
+          "ram": "8 GB",
+          "memoryType": "SSD",
+          "memory": "512 GB"
+      },
+      "availableSizes": ["Acer"],
+      "price": 71990 
     },
     {
       "_id": "laptop3",
-      "image": "/images/laptop3.jpg",
-      "title": "Midi dress in pink ditsy floral",
-      "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
-      "availableSizes": ["Laptop"],
-      "price": 14.9
-    },
+      "image": "/images/lenovoIdeapad.jpg",
+      "title": "НОУТБУК LENOVO IDEAPAD 3 I381TMW",
+      "description": {
+        "diagonal": "15,6″ - 39,62 см",
+          "gpu": "nVidia GeForce MX",
+          "os": "Windows 10",
+          "cpu": "Intel® Core™ i3 1005G1",
+          "CPU_frequency": "1.20 ГГц",
+          "ram": "8 GB",
+          "memoryType": "HHD",
+          "memory": "1 TB"
+      },
+      "availableSizes": ["Lenovo"],
+      "price": 49990 
+    },   
     {
       "_id": "laptop4",
-      "image": "/images/laptop4.jpg",
-      "title": "cami maxi dress in polka dot",
-      "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
-      "availableSizes": ["Laptop"],
-      "price": 25.9
-    },
+      "image": "/images/asusTUF.png",
+      "title": "НОУТБУК ASUS TUF DASHF15 FX516PE",
+      "description": {
+        "diagonal": "15,6″ - 39,62 см",
+          "gpu": "nVidia GeForce RTX",
+          "os": "DOS",
+          "cpu": "Intel® Core™ i7-11370H",
+          "CPU_frequency": "4.8 ГГц",
+          "ram": "16 GB",
+          "memoryType": "SSD",
+          "memory": "512"
+      },
+      "availableSizes": ["Asus"],
+      "price": 113990 
+    },  
     {
-      "_id": "phone1",
-      "image": "/images/phone1.jpg",
-      "title": "Frill mini dress in yellow polka dot",
-      "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
-      "availableSizes": ["Phone"],
-      "price": 10.9
-    },
+      "_id": "laptop5",
+      "image": "/images/asusVivoBook.jpg",
+      "title": "УЛЬТРАБУК ASUS VIVOBOOK 15 X512J",
+      "description": {
+        "diagonal": "15,6″ - 39,62 см",
+          "gpu": "Intel UHD Graphics",
+          "os": "Windows 10",
+          "cpu": "Intel® Core™ i3-1005G1",
+          "CPU_frequency": "1.2 ГГц",
+          "ram": "8 GB",
+          "memoryType": "HHD",
+          "memory": "1 TB"
+      },
+      "availableSizes": ["Asus"],
+      "price": 51990 
+    },    
     {
-      "_id": "phone2",
-      "image": "/images/phone2.jpg",
-      "title": "Midi tea dress in blue and red spot",
-      "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
-      "availableSizes": ["Phone"],
-      "price": 49.9
-    }
+      "_id": "laptop6",
+      "image": "/images/macbook.jpg",
+      "title": "НОУТБУК APPLE MACBOOK AIR 13″ I5 1.8/8GB/128SSD SILVER",
+      "description": {
+        "diagonal": "13,3″ - 33,78 см",
+          "gpu": "Intel HD Graphics",
+          "os": "macOS Sierra",
+          "cpu": "Intel® Core™ i5-5350U",
+          "CPU_frequency": "1.8 ГГц",
+          "ram": "8 GB",
+          "memoryType": "SSD",
+          "memory": "128 GB"
+      },
+      "availableSizes": ["Apple"],
+      "price": 70890 
+    },    
+    {
+      "_id": "laptop7",
+      "image": "/images/dell_1.jpg",
+      "title": "УЛЬТРАБУК DELL INSPIRON 5401 I585SMN 210-AVOM-A4",
+      "description": {
+        "diagonal": "14″ - 35,56 см",
+          "gpu": "Intel HD Graphics",
+          "os": "Linux",
+          "cpu": "Intel® Core™ i5-1035G1",
+          "CPU_frequency": "1 ГГц",
+          "ram": "8 GB",
+          "memoryType": "SSD",
+          "memory": "512 GB"
+      },
+      "availableSizes": ["Dell"],
+      "price": 73990 
+    },   
+    {
+      "_id": "laptop8",
+      "image": "/images/macbookTouchbar.jpg",
+      "title": "НОУТБУК APPLE MACBOOK AIR 13″ (2020) I3 1,1/8GB/256GB SSD GOLD",
+      "description": {
+        "diagonal": "15,4″ - 39,12 см",
+          "gpu": "AMD Radeon Pro",
+          "os": "macOS Sierra",
+          "cpu": "Intel® Core™ i7-7700HQ",
+          "CPU_frequency": "2.8 ГГц",
+          "ram": "16 GB",
+          "memoryType": "SSD",
+          "memory": "256 GB"
+      },
+      "availableSizes": ["Apple"],
+      "price": 215990 
+    },    
+    {
+      "_id": "laptop9",
+      "image": "/images/tuf_gaming.jpg",
+      "title": "НОУТБУК ASUS TUF GAMING FX505GT",
+      "description": {
+        "diagonal": "15,6″ - 39,62 см",
+          "gpu": "nVidia GeForce GTX",
+          "os": "DOS",
+          "cpu": "Intel® Core™ i5-9300H",
+          "CPU_frequency": "2.4 ГГц",
+          "ram": "8 GB",
+          "memoryType": "SSD",
+          "memory": "512 GB"
+      },
+      "availableSizes": ["Asus"],
+      "price": 63590 
+    }    
   ]
 }
