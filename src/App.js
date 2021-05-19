@@ -3,19 +3,33 @@ import React from 'react';
 import Cart from './components/Cart';
 import Filter from './components/Filter';
 import Products from './components/Products';
-import data from './data.json'
+import data from './data.json';
+import firebase from './firebase';
+import gerb from './assets/img/oshgu.jpg';
 
 class App extends React.Component {
 
   constructor() {
     super()
     this.state = {
-      products: data.products,
+      products: [],
       cartItems: localStorage.getItem("cartItems") ? JSON.parse(localStorage.getItem("cartItems")) : [],
       size: "",
       sort: "",
       filter: true
     }
+  }
+
+  componentDidMount() {
+    firebase.firestore().collection('products').get().then(s => {
+      this.setState({
+        products: s.docs.map(v => {
+          return v.data();
+        })
+      });
+    }).catch(e => {
+      console.log(e);
+    });
   }
 
   filterPositionShow = () => {
@@ -126,7 +140,12 @@ class App extends React.Component {
             </div>
           </main>
           <footer>
-            Сулайманова Г.Ж
+            <img src={gerb} style={{ width: "100px", borderRadius: "50%", marginRight: "1rem" }} />
+            <div className="">
+              <p>Автор программы:</p>
+              <p>студентка группы: ИСТ(б)-2-17р</p>
+              <p>Топчубай кызы Арууке</p>
+            </div>
           </footer>
         </div>
       </div>

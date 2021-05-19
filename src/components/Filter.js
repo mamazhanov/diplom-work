@@ -11,19 +11,9 @@ export default class Filter extends Component {
                 <div className="filter-sort">
                     Сортировка по {" "}
                     <select value={this.props.sort} onChange={this.props.sortProducts}>
-                        <option>новые</option>
+                        <option></option>
                         <option value="lowest">убыванию цены</option>
                         <option value="highest">возрастанию цены</option>
-                    </select>
-                </div>
-                <div className="filter-size">
-                    Фильтр {" "}
-                    <select value={this.props.size} onChange={this.props.filterProducts}>
-                        <option value="">Все</option>
-                        <option value="Acer">Acer</option>
-                        <option value="Asus">Asus</option>
-                        <option value="Apple">Apple</option>
-                        <option value="Lenovo">Lenovo</option>
                     </select>
                 </div>
             </div>

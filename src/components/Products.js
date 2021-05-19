@@ -12,6 +12,7 @@ export default class Products extends Component {
         };
     }
 
+
     openModal = (product) => {
         this.setState({ product });
         this.props.filterPositionNone();
@@ -24,6 +25,7 @@ export default class Products extends Component {
 
     render() {
         const { product } = this.state;
+
         return (
             <div >
                 <Fade bottom cascade>
