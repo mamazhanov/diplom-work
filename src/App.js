@@ -143,8 +143,8 @@ class App extends React.Component {
             <img src={gerb} style={{ width: "100px", borderRadius: "50%", marginRight: "1rem" }} />
             <div className="">
               <p>Автор программы:</p>
-              <p>студентка группы: ИСТ(б)-2-17р</p>
-              <p>Топчубай кызы Арууке</p>
+              <p>Группа: ИСТ(б)-2-17р</p>
+              <p>Студент: Топчубай кызы Арууке</p>
             </div>
           </footer>
         </div>
