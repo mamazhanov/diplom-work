@@ -273,3 +273,39 @@ input {
   top: 2.5rem;
   z-index: 1000;
 }
+
+/*ADMIN*/
+.admin {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: palegreen;
+}
+.admin .form div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 7px 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+.admin .form div input,
+select {
+  padding: 5px 9px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: chartreuse 0.05px solid;
+  outline: none;
+}
+.admin .form div button {
+  margin: 1rem auto;
+  padding: 5px 9px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: chartreuse 0.05px solid;
+  outline: none;
+  width: 50%;
+  cursor: pointer;
+}
