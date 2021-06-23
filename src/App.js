@@ -1,4 +1,3 @@
-import {render} from '@testing-library/react';
 import React from 'react';
 import Cart from './components/Cart';
 import Filter from './components/Filter';
